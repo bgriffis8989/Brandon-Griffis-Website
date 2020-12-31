@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+}
+
+nav ul {
+  float: left;
+  padding-left: 20px;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100px;
+  margin: 0;
+  padding: 20.6px 19px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav ul li ul {
+  display: none;
+  background-color: black;
+  position: absolute;
+  padding: 0;
+  border-radius: 0px 0px 6px 6px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 5px;
+  border-radius: 6px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+ul li a.active {
+  background: rgb(255, 255, 255);
+  color: black;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.title {
+  display: none;
+  text-align: center;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 500px;
+  left: 50%;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  width: 50%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.profilepic {
+  display: none;
+  height: 300px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  position: absolute;
+  transform: translateX(-49%) translateY(-50%);
+  top: 580px;
+  left: 49%;
+}
+
+#bglogo {
+  position: absolute;
+  transform: translateX(-48%) translateY(-50%);
+  top: 300px;
+  left: 47%;
+  height: 400px;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact {
+  display: none;
+}
+
+.port-title {
+  text-align: center;
+}
+
+.webpic {
+  width: 200px;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 300px;
+  left: 50%;
+  border-radius: 10px;
+}
+
+.webtitle {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 400px;
+  left: 50%;
+}
+
+.webpic:hover {
+  width: 220px;
+}
+
+.webtitle a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.contactMe {
+  background-color: lightgrey;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 300px;
+  left: 50%;
+  text-align: center;
+}
+
+.contactMe a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50px;
+  left: 50%;
+}
+
+.contactMe:hover {
+  background-color: rgba(0, 0, 0, 0.274);
+}
+
+.contactMe a:hover {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+.location {
+  width: max-content;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 400px;
+  left: 50%;
+}
+
+.image {
+  position: relative;
+  transform: translateX(-50%) translateY(-50%);
+  top: 400px;
+  left: 50%;
+  width: 400px;
+}
+
+.resumePic {
+  display: block;
+  width: 100%;
+}
+
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.609);
+  color: white;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.25s;
+  border-radius: 10px;
+}
+
+.image_overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image_overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image_overlay:hover {
+  opacity: 1;
+}
+
+.image_title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image_description {
+  font-size: 1.25em;
+  margin-top: 0.5em;
+}
+
+.video video {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 500px;
+  left: 50%;
+  border-radius: 10px;
+}
+
+@media (max-width: 1500px) {
+  .profilepic {
+    left: 49%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .profilepic {
+    left: 50%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .profilepic {
+    top: 580px;
+    left: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .video video {
+    width: 70%;
+    top: 420px;
+  }
+  #bglogo {
+    top: 350px;
+  }
+  .profilepic {
+    top: 630px;
+    left: 51%;
+  }
+  .webpic {
+    top: 400px;
+  }
+  .webtitle {
+    top: 500px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav ul li a {
+    font-size: smaller;
+    padding: 10px;
+  }
+  .webpic {
+    top: 400px;
+  }
+  .webtitle {
+    top: 500px;
+  }
+  #bglogo {
+    top: 350px;
+    height: 300px;
+  }
+  .profilepic {
+    top: 570px;
+    height: 240px;
+    left: 52%;
+  }
+  .location {
+    font-size: 12px;
+  }
+}
